@@ -6,7 +6,7 @@ export const AdminProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
 
   const addProduct = (name, price, image, color, stock) => {
-    return fetch('http://localhost:5001/products/create', {
+    return fetch('http://localhost:5002/products/create', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

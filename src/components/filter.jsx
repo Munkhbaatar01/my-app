@@ -11,8 +11,11 @@ export default function Filter({ onFilterChange }) {
     const handleChange = (sel) => {
         const { name, value } = sel.target;
         const newFilters = { ...filters, [name]: value };
+        const minPrice = newFilters.minPrice !== "" ? Number(newFilters.minPrice) : 0;
+        const maxPrice = newFilters.maxPrice !== "" ? Number(newFilters.maxPrice) : Infinity;
+
         setFilters(newFilters);
-        onFilterChange(newFilters);  
+        onFilterChange({ ...newFilters, priceRange: [minPrice, maxPrice] });  
     };
 
     return (

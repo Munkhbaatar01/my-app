@@ -9,7 +9,7 @@ export const ProductProvider = ({ children }) => {
 
   useEffect(() => {
     console.log("Fetching products from API...");
-    fetch("http://localhost:5001/products/get") // <-- API хаягаа шалгаарай
+    fetch("http://localhost:5002/products/get") // <-- API хаягаа шалгаарай
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch products");
         return res.json();

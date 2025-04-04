@@ -6,7 +6,7 @@ export const LoginProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
   const login = (email, password) => {
-    return fetch('http://localhost:5001/users/login', {
+    return fetch('http://localhost:5002/users/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

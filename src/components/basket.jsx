@@ -30,7 +30,7 @@ const Basket = () => {
             {cartItems.map((item) => (
               <li key={item.id} className="flex flex-col sm:flex-row items-center justify-between border-b border-gray-200 pb-4 mb-4">
                 <img
-                  src={item.color}
+                  src={ "https://th.bing.com/th/id/OIP.KfgFofCdHP0XV1ALqofQ2wHaEo?rs=1&pid=ImgDetMain"}
                   alt={item.name}
                   className="w-24 h-24 object-cover rounded mb-4 sm:mb-0"
                 />

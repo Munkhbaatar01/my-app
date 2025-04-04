@@ -6,7 +6,7 @@ export const SignUpProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
   const signUp = (email, password) => {
-    return fetch('http://localhost:5001/users/signup', {
+    return fetch('http://localhost:5002/users/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
